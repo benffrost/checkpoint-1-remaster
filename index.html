@@ -13,19 +13,43 @@
 </head>
 
 <body>
-  <span>Name:<span id="name">--</span></span><br \>
-  <span>Health:<span id="health">--</span></span><br \>
-  <span>Hits:<span id="hits">--</span></span><br \>
+  <div class="container-fluid text-center">
+    <div class="row">
+      <div class="col">
+        <h2 id="name"> </h2>
+      </div>
+      <div class="col">
+        <h3>Health: <span id="health"> </span></h3>
+      </div>
+      <div class="col">
+        <h3>Hits: <span id="hits"> </span></h3>
+      </div>
+    </div>
+    <div class="row">
 
-  <img src="alien.gif" alt="target" />
+      <div class="col"><img src="alien.gif" alt="target" /></div>
 
-  <button onClick="slap()">Slap</button>
-  <button onClick="punch()">Punch</button>
-  <button onClick="kick()">Kick</button>
-  <div id="items">
-    <button onclick="giveItem('cleats')">cleats</button>
-    <button onclick="giveItem('boomerang')">boomerang</button>
-    <button onclick="giveItem('sword')">sword</button></div>
+    </div>
+    <div class="row">
+      <div class="col"><button class="btn btn-primary m-2 btn-block" onClick="slap()">Slap</button></div>
+      <div class="col"><button class="btn btn-primary m-2 btn-block" onClick="punch()">Punch</button></div>
+      <div class="col"><button class="btn btn-primary m-2 btn-block" onClick="kick()">Kick</button></div>
+    </div>
+    <div class="row" id="items">
+      <div class="col"><button class="btn btn-info m-2 btn-block" onClick="giveItem('cleats')">cleats</button></div>
+      <div class="col"><button class="btn btn-info m-2 btn-block" onClick="giveItem('boomerang')">boomerang</button>
+      </div>
+      <div class="col"><button class="btn btn-info m-2 btn-block" onClick="giveItem('sword')">sword</button></div>
+    </div>
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col"><button class="btn btn-danger btn-block m-2" onClick="resetGame()">Reset Game</button></div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+
+
+
   <script src="game.js"></script>
 </body>
 

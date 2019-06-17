@@ -5,6 +5,8 @@ let target = {
   items: []
 }
 
+
+
 let items = {
   cleats: { name: "cleats", modifier: 2, description: "pointy" },
   boomerang: { name: "boomarang", modifier: 1, description: "returny" },
@@ -48,6 +50,13 @@ function addMods() {
     output *= target.items[i].modifier;
   }
   return output;
+}
+
+function resetGame() {
+  target.health = 100;
+  target.hits = 0;
+  target.items = [];
+  update();
 }
 
 update();
