@@ -27,7 +27,7 @@ function punch() {
 
 }
 function kick() {
-  target.health -= 5 * addMods() - 1 ;
+  target.health -= 5 * addMods() - 1;
   target.hits++;
   update();
 
@@ -35,7 +35,7 @@ function kick() {
 
 function update() {
   document.querySelector("#name").innerHTML = `${target.name}`
-  document.querySelector("#health").innerHTML = `${target.health}`
+  document.querySelector("#health").innerHTML = `${target.health > 0 ? target.health : "Dead"}`
   document.querySelector("#hits").innerHTML = `${target.hits}`
 }
 
