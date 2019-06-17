@@ -9,7 +9,7 @@ let target = {
 
 let items = {
   cleats: { name: "cleats", modifier: 2, description: "pointy" },
-  boomerang: { name: "boomarang", modifier: 1, description: "returny" },
+  boomerang: { name: "boomarang", modifier: 1.5, description: "returny" },
   sword: { name: "Sword", modifier: 3, descritpion: "edgy" }
 }
 
@@ -21,13 +21,13 @@ function slap() {
 }
 
 function punch() {
-  target.health -= 5 * addMods();
+  target.health -= 2 + 3 * addMods();
   target.hits++;
   update();
 
 }
 function kick() {
-  target.health -= 10 * addMods();
+  target.health -= 5 * addMods() - 1 ;
   target.hits++;
   update();
 
