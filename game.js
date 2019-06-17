@@ -13,6 +13,7 @@ let items = {
   sword: { name: "Sword", modifier: 3, descritpion: "edgy" }
 }
 
+// TODO: consilidate the functions for attacking
 function slap() {
   target.health -= addMods();
   target.hits++;
@@ -33,13 +34,16 @@ function kick() {
 
 }
 
+var targetNameElem = document.querySelector("#name") // optimizing the game
+
 function update() {
-  document.querySelector("#name").innerHTML = `${target.name}`
+  targetNameElem.innerHTML = `${target.name}`
   document.querySelector("#health").innerHTML = `${target.health > 0 ? target.health : "Dead"}`
   document.querySelector("#hits").innerHTML = `${target.hits}`
 }
 
 function giveItem(item) {
+  // ensure the item exists prior to pushing
   target.items.push(items[item]);
 }
 
