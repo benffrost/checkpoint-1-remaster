@@ -1,6 +1,6 @@
 let target = {
   health: 100,
-  name: "whatevs",
+  name: "Alien",
   hits: 0,
   items: []
 }
